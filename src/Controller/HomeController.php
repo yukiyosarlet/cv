@@ -21,6 +21,7 @@ class HomeController extends AbstractController
             'rijbewijs' => 'B',
             'linkedin' => 'linkedin.com/in/yukiyo-sarlet',
             'github' => 'github.com/yukiyosarlet',
+            "websiet" => 'https://cv-cg2q.onrender.com/',
             'omschrijving' => 'Leergierige en analytische Junior .NET Developer met interesse in zowel back-end als front-end development. Gemotiveerd om performante en gebruiksvriendelijke applicaties te ontwikkelen met technologieën zoals C#, ASP.NET Core, Angular en SQL. Teamgericht, proactief en sterk in het oplossen van technische problemen, met de ambitie om verder te groeien binnen een moderne IT-omgeving.',
         ];
 
@@ -31,7 +32,7 @@ class HomeController extends AbstractController
 
         $hobbys = ['Duiken', 'Zeilen', 'Voetbal', 'Fitnes'];
 
-        $contract = ['Full Time Contract', 'IBO-Contract', 'Stages'];
+        $contract = ['Full Time Contract', 'IBO-Contract'];
 
         $opleidingen = [
             [
