@@ -31,7 +31,7 @@ class HomeController extends AbstractController
 
         $hobbys = ['Duiken', 'Zeilen', 'Voetbal', 'Fitnes'];
 
-        $contract = ['Full Time Contract', 'IBO-Contract'];
+        $contract = ['Full Time Contract', 'IBO-Contract', 'Stages'];
 
         $opleidingen = [
             [

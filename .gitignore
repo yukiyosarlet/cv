@@ -1,3 +1,10 @@
+/vendor/
+/var/
+/.env.local
+/.env.local.php
+/.env.*.local
+/public/bundles/
+.DS_Store
 
 ###> symfony/framework-bundle ###
 /.env.local
