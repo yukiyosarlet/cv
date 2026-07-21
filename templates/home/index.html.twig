@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ profiel.naam }} - Info{% endblock %}
+
+{% block body %}
+<div class="container">
+    <aside class="sidebar">
+        <div class="avatar-placeholder">YS</div>
+        <h1>{{ profiel.naam }}</h1>
+        <p class="subtitle">{{ profiel.titel }}</p>
+
+        <h3>Contact</h3>
+        <ul class="plain-list">
+            <li>📍 {{ profiel.adres }}</li>
+            <li>✉️ {{ profiel.email }}</li>
+            <li>📞 {{ profiel.telefoon }}</li>
+            <li>🚗 Rijbewijs {{ profiel.rijbewijs }}</li>
+            <li>💼 <a href="https://{{ profiel.linkedin }}" target="_blank">{{ profiel.linkedin }}</a></li>
+            <li>💻 <a href="https://{{ profiel.github }}" target="_blank">{{ profiel.github }}</a></li>
+            <li>🎂 {{ profiel.geboortedatum }}</li>
+        </ul>
+
+        <h3>Talen</h3>
+        <ul class="plain-list">
+            {% for taal, niveau in talen %}
+                <li>{{ taal }}: <strong>{{ niveau }}</strong></li>
+            {% endfor %}
+        </ul>
+
+        <h3>Hobby's</h3>
+        <ul class="plain-list">
+            {% for hobby in hobbys %}
+                <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Contract</h3>
+        <ul class="plain-list">
+            {% for c in contract %}
+                <li>{{ c }}</li>
+            {% endfor %}
+        </ul>
+    </aside>
+
+    <section class="content">
+        <div class="card">
+            <h2>Profiel</h2>
+            <p>{{ profiel.omschrijving }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Opleiding</h2>
+            {% for opleiding in opleidingen %}
+                <div class="opleiding-item">
+                    <span class="jaar-badge">{{ opleiding.jaar }}</span>
+                    <div>
+                        <h4>{{ opleiding.titel }}</h4>
+                        <p class="school">{{ opleiding.school }}</p>
+                        {% if opleiding.detail %}
+                            <p class="detail">{{ opleiding.detail }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="card">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                {% for skill in skills %}
+                    <span class="skill-tag">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

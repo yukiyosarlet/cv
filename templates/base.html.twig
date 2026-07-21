@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Yukiyo Sarlet - CV{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <span class="nav-logo">Yukiyo Sarlet</span>
+            <div class="nav-links">
+                <a href="{{ path('home') }}" class="{{ app.request.attributes.get('_route') == 'home' ? 'active' : '' }}">Info</a>
+                <a href="{{ path('experience') }}" class="{{ app.request.attributes.get('_route') == 'experience' ? 'active' : '' }}">Ervaring</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ "now"|date("Y") }} Yukiyo Sarlet</p>
+    </footer>
+</body>
+</html>
