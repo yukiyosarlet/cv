@@ -32,6 +32,7 @@ class ExperienceController extends AbstractController
                     "Implementeerde JWT-authenticatie met rolgebaseerde autorisatie, EF Core met code-first migraties, en een gelaagde architectuur (repositories, services, controllers)",
                     "Bouwde een interactief dashboard met Chart.js voor visualisatie van asset-statistieken per status en categorie",
                     "Debugde en loste complexe full-stack issues op: EF Core entity-tracking conflicts, enum-serialisatie tussen backend/frontend, CORS- en proxy-configuratie voor development/productie",
+                    "http://assetflow.runasp.net/  (gebruikersnaam: admin, wachtwoord: Admin123!)",
                 ],
                 'talen' => ['Full-stack persoonlijk project', 'ASP.NET Core (.NET 10)', "Entity Framework Core", "Angular 22", "Angular Material"],
             ],
